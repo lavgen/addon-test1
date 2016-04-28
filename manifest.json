@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+
+	"name": "cool addon",
+	"description": "it is pretty cool",
+	"version": "1.0" ,
+	"icons":{
+		"48": "icons/icon-48.jpg"
+		},
+	"applications":{
+		"gecko":{
+			"id": "borderify@mozilla.org", 
+			"strict_min_verion": "45.0"
+			}
+		},
+
+		"content_scripts": [
+		{
+			"matches": ["*://*.google.com/*"],
+			 "js": ["fuckGoogle.js"]
+		}
+	],
+	"permissions" : [
+		"activeTab"
+	],
+
+	"browser_action" : {
+		"default_icon" : "icons/iconimg.jpg",
+		"default_title" : "upit" ,
+		"default_popup" : "upit.html"
+	},
+
+	"web_accessible_resources" : [
+		"images/imageone.jpg",
+		"images/imagetwo.jpg",
+		"images/imagethree.jpg"
+	]
+
+}
+
